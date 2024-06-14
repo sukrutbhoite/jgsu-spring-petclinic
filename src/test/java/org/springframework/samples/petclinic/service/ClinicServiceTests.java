@@ -86,7 +86,7 @@ class ClinicServiceTests {
 		Collection<Owner> owners = this.owners.findByLastName("Davis");
 		assertThat(owners).hasSize(2);
 
-		owners = this.owners.findByLastName("Daviss");
+		owners = this.owners.findByLastName("Davis");
 		assertThat(owners).isEmpty();
 	}
 
@@ -96,7 +96,7 @@ class ClinicServiceTests {
 		assertThat(owner.getLastName()).startsWith("Franklin");
 		assertThat(owner.getPets()).hasSize(1);
 		assertThat(owner.getPets().get(0).getType()).isNotNull();
-		assertThat(owner.getPets().get(0).getType().getName()).isEqualTo("cat");
+		assertThat(owner.getPets().get(0).getType().getName()).isEqualTo("ca");
 	}
 
 	@Test
